@@ -1,80 +1,45 @@
-function switchLight(lightID, boolValue)
+
+var URL = "http://192.168.0.50/api/stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz/lights/"
+
+
+
+function switchLightOn(lightID, color)             //This function takes a light ID number.  It then switches the given light on or off.
 {
-    var lightState = {"on" : boolValue};
+	if (color == "green")
+	{
+		var lightCommand = {"on" : true, "hue" : 25500, "sat" : 255 , "bri" : 100};
+	}else if (color == "red")
+	{
+		var lightCommand = {"on" : true, "hue" : 0, "sat" : 255 , "bri" : 100};
+	}
+	
+		
+	
+    //var lightCommand = {"on" : true, "hue" : 25500};       //JSON to send to the lights
+    var lightURI =  URL + lightID + "/state/";
+
+    console.log(lightCommand);  //Outputs to console content of lightCommand variable. We can then check that this is correct value and format
+    console.log(lightURI);      //Check in the console that lightURI value is correct
 
     $.ajax({
-        url: getLightURI(lightID) + "state/",
+        url: lightURI,                      //uses variable lightURI
         type: "PUT",
-        data: JSON.stringify(lightState)
+        data: JSON.stringify(lightCommand)  //translates contents of lightCommand variable into jSON code
     })
 }
 
-function OneToOn()
+
+function switchLightOff(lightID)  //This function takes a light ID number.  It then switches the given light on or off.
 {
-	 $.ajax({
-        url: getLightURI(lightID) + "state/",
+    var lightCommand = {"on" : false}; //this creates a string of  { "on" : false }
+    var lightURI = URL + lightID + "/state/";
+
+    $.ajax({
+        url: lightURI,  //calls function getLightURI (see below) and passes the required light ID
         type: "PUT",
-        data: JSON.stringify(lightState)
+        data: JSON.stringify(lightCommand)  //translates contents of lightCommand variable into jSON code
     })
 }
 
 
-function getLightURI(lightID)
-{
 
-    var IP = "http://192.168.0.50/api/";
-    var username = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
-    var lights = "/lights/";
-    var URI = IP + username + lights;
-    return URI +lightID +"/";
-}
-
-
-
-function togglelight()
-{
-    var getState = $.getJSON(getLightURI(1)), function (data)
-        {
-            var state = data["state"]["on"];
-            if (state)
-            {
-                state = false;
-            }
-            else
-            {
-                state = true;
-            }
-
-            switchLight(element.attr("id"), state);
-        });
-}
-
-
-
-
-$(document).ready(function()
-{
-    $('td').click(function()
-    {
-        togglelight($(this));
-
-        if (checkWin($(this)))
-        {
-            $(this).removeClass("bg-light").addClass("bg-success");
-            alert("Congratulations you have won!");
-        }
-        else
-        {
-            $(this).removeClass("bg-light").addClass("bg-danger");
-        }
-    })
-
-    //variable goes here for generating random number
-    //don't forget to create the function to generate said random number
-
-    //now put selector here for working out if they've clicked the button to guess
-    //get the guess value and check to see if it matches that random number given above
-    //if it does, yippee turn the lights on - send your row number plus a true to switchLight function
-    //if it does not - tell the user they've got it wrong
-
-});
