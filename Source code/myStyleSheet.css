@@ -15,11 +15,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  width: 15%;
+  width: 150px;
   font-family: 'Open Sans', sans-serif;
 
 
-  
+
 }
 
 /* Change the color of links on hover */
@@ -41,7 +41,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
 }
 
 body {
-  background-color: #444444; 
+  background-color: #DDDDDD;
 }
 
 input[type=password], select {
@@ -70,7 +70,7 @@ button[type=button], select {
   text-align: center;
   font-weight: bold;
   background-color: #FFFFFF;
-	
+
 
 
 /* Fun with Collumns */
@@ -99,8 +99,3 @@ button[type=button], select {
     width: 100%;
   }
 }
-
-
-
-
-
