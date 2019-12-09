@@ -12,9 +12,9 @@ function switchLightOn(lightID, color)             //This function takes a light
 	{
 		var lightCommand = {"on" : true, "hue" : 0, "sat" : 255 , "bri" : 100};
 	}
-	
-		
-	
+
+
+
     //var lightCommand = {"on" : true, "hue" : 25500};       //JSON to send to the lights
     var lightURI =  URL + lightID + "/state/";
 
@@ -40,6 +40,3 @@ function switchLightOff(lightID)  //This function takes a light ID number.  It t
         data: JSON.stringify(lightCommand)  //translates contents of lightCommand variable into jSON code
     })
 }
-
-
-
