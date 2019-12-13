@@ -40,3 +40,142 @@ function switchLightOff(lightID)  //This function takes a light ID number.  It t
         data: JSON.stringify(lightCommand)  //translates contents of lightCommand variable into jSON code
     })
 }
+
+
+function passwordCheck() {
+
+
+
+
+
+    var pass = document.getElementById("psw").value;
+    var points = 0;
+    var lowPass = pass.toLowerCase();
+    var highPass = pass.toUpperCase();
+
+    //Strong password features
+    var lengthOver8 = false;
+    var lengthOver16 = false;
+    var multicase = false;
+    var specialChar = false;
+    var alphanumeric = false;
+    var noConsecutiveChars = false;
+
+
+    //Check the length
+    if (pass.length >= 8) {
+        points++;
+        lengthOver8 = true;
+        if (pass.length >= 16) {
+            points++
+            lengthOver16 = true;
+        }
+    }
+
+    //Check for multicase
+    if (pass != lowPass && pass != highPass) {
+        points++;
+        multicase = true;
+    }
+
+    //Check for special chars
+    if (!pass.match(/^[a-zA-Z0-9- ]*$/)) {
+        points++;
+        specialChar = true;
+    }
+
+    //Check for alphanumeric
+    if (pass.match(/.*[a-z].*/) && pass.match(/.*[0-9].*/)) {
+        points++;
+        alphanumeric = true;
+    }
+
+    //Check for consecutive characters
+    if (!pass.match(/(.)\1\1/)) {
+        points++;
+        noConsecutiveChars = true;
+    }
+
+
+
+		//Populating the text on the web page
+
+    if (lengthOver8 == true) {
+        txtLengthOver8.innerHTML = "Password is over eight charecters".fontcolor("green");
+		switchLightOn(1,'green')
+    } else {
+        txtLengthOver8.innerHTML = "Password is not over eight charecters".fontcolor("red");
+		switchLightOn(1,'red')
+    }
+
+    if (lengthOver16 == true) {
+        txtLengthOver16.innerHTML = "Password is over sixteen charecters".fontcolor("green");
+		switchLightOn(2,'green')
+    } else {
+        txtLengthOver16.innerHTML = "Password is not over sixteen charecters".fontcolor("red");
+		switchLightOn(2,'red')
+    }
+
+    if (multicase == true) {
+        txtMulticase.innerHTML = "Password uses multicase".fontcolor("green");
+		switchLightOn(3,'green')
+    } else {
+        txtMulticase.innerHTML = "Password doesn't use multicase".fontcolor("red");
+		switchLightOn(3,'red')
+    }
+
+    if (specialChar == true) {
+        txtSpecialChar.innerHTML = "Password uses special charecters".fontcolor("green");
+		switchLightOn(4,'green')
+    } else {
+        txtSpecialChar.innerHTML = "Password doesn't use special charecters".fontcolor("red");
+		switchLightOn(4,'red')
+    }
+
+    if (alphanumeric == true) {
+        txtAlphanumeric.innerHTML = "Password contains both letters and numbers".fontcolor("green");
+		switchLightOn(5,'green')
+    } else {
+        txtAlphanumeric.innerHTML = "Password doesn't use both numbers and letters".fontcolor("red");
+		switchLightOn(5,'red')
+    }
+
+    if (noConsecutiveChars == true) {
+        txtNoConsecutiveChars.innerHTML = "Password doesn't use any consecutive charecters".fontcolor("green");
+		switchLightOn(6,'green')
+    } else {
+        txtNoConsecutiveChars.innerHTML = "Password uses consecutive charecters".fontcolor("red");
+		switchLightOn(6,'red')
+    }
+
+    //Doesn't fill in if the password is less than three
+    if (pass.length < 1) {
+			clearPass();
+    }
+
+
+    /*
+    			psw.value = "";
+
+          alert("Length over 8: " + lengthOver8 +
+    			"  | Length over 16: " + lengthOver16 +
+    			"  | multicase: " + multicase +
+          "  | Has special characters: " + specialChar +
+    			"  | Alphanumeric: " + alphanumeric +
+    			"  | No consecutive characters: " + noConsecutiveChars +
+
+    			"  | Points: " + points)
+
+    			*/
+}
+
+//This function clears the password field
+function clearPass(){
+	psw.value =
+	txtLengthOver8.innerHTML = "";
+	txtLengthOver16.innerHTML = "";
+	txtMulticase.innerHTML = "";
+	txtSpecialChar.innerHTML = "";
+	txtAlphanumeric.innerHTML = "";
+	txtNoConsecutiveChars.innerHTML = "";
+}
