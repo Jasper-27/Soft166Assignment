@@ -171,11 +171,11 @@ function passwordCheck() {
 
 //This function clears the password field
 function clearPass(){
-	psw.value =
-	txtLengthOver8.innerHTML = "";
-	txtLengthOver16.innerHTML = "";
-	txtMulticase.innerHTML = "";
-	txtSpecialChar.innerHTML = "";
-	txtAlphanumeric.innerHTML = "";
-	txtNoConsecutiveChars.innerHTML = "";
+	psw.value = "";
+	txtLengthOver8.innerHTML = "&#8287;";
+	txtLengthOver16.innerHTML = "&#8287;";
+	txtMulticase.innerHTML = "&#8287;";
+	txtSpecialChar.innerHTML = "&#8287;";
+	txtAlphanumeric.innerHTML = "&#8287;";
+	txtNoConsecutiveChars.innerHTML = "&#8287;";
 }
