@@ -59,7 +59,7 @@ function passwordCheck() {
     var multicase = false;
     var specialChar = false;
     var alphanumeric = false;
-    var noConsecutiveChars = false;
+    var noRepeatingChars = false;
 
 
     //Check the length
@@ -93,58 +93,67 @@ function passwordCheck() {
     //Check for consecutive characters
     if (!pass.match(/(.)\1\1/)) {
         points++;
-        noConsecutiveChars = true;
+        noRepeatingChars = true;
     }
 
 
 
-		//Populating the text on the web page
 
+
+// &#9785; is a sad face
+// &#9786; is a happy face
+
+//&#128522; is happy emoji
+//&#128560; is sad emoji
+
+
+//Populating the text on the web page
+  //The color is left in incase the users browser does not support emojis. 
     if (lengthOver8 == true) {
-        txtLengthOver8.innerHTML = "Password is over eight charecters".fontcolor("green");
+        txtLengthOver8.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(1,'green')
     } else {
-        txtLengthOver8.innerHTML = "Password is not over eight charecters".fontcolor("red");
+        txtLengthOver8.innerHTML = "&#128560;".fontcolor("#F44336");
 		switchLightOn(1,'red')
     }
 
     if (lengthOver16 == true) {
-        txtLengthOver16.innerHTML = "Password is over sixteen charecters".fontcolor("green");
+        txtLengthOver16.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(2,'green')
     } else {
-        txtLengthOver16.innerHTML = "Password is not over sixteen charecters".fontcolor("red");
+        txtLengthOver16.innerHTML = "&#128560;".fontcolor("#F44336");
 		switchLightOn(2,'red')
     }
 
     if (multicase == true) {
-        txtMulticase.innerHTML = "Password uses multicase".fontcolor("green");
+        txtMulticase.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(3,'green')
     } else {
-        txtMulticase.innerHTML = "Password doesn't use multicase".fontcolor("red");
+        txtMulticase.innerHTML = "&#128560;".fontcolor("#F44336");
 		switchLightOn(3,'red')
     }
 
     if (specialChar == true) {
-        txtSpecialChar.innerHTML = "Password uses special charecters".fontcolor("green");
+        txtSpecialChar.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(4,'green')
     } else {
-        txtSpecialChar.innerHTML = "Password doesn't use special charecters".fontcolor("red");
+        txtSpecialChar.innerHTML = "&#128560;".fontcolor("#F44336");
 		switchLightOn(4,'red')
     }
 
     if (alphanumeric == true) {
-        txtAlphanumeric.innerHTML = "Password contains both letters and numbers".fontcolor("green");
+        txtAlphanumeric.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(5,'green')
     } else {
-        txtAlphanumeric.innerHTML = "Password doesn't use both numbers and letters".fontcolor("red");
+        txtAlphanumeric.innerHTML = "&#128560".fontcolor("#F44336");
 		switchLightOn(5,'red')
     }
 
-    if (noConsecutiveChars == true) {
-        txtNoConsecutiveChars.innerHTML = "Password doesn't use any consecutive charecters".fontcolor("green");
+    if (noRepeatingChars == true) {
+        txtRepeatingChars.innerHTML = "&#128522;".fontcolor("#21FF21");
 		switchLightOn(6,'green')
     } else {
-        txtNoConsecutiveChars.innerHTML = "Password uses consecutive charecters".fontcolor("red");
+        txtRepeatingChars.innerHTML = "&#128560;".fontcolor("#F44336");
 		switchLightOn(6,'red')
     }
 
