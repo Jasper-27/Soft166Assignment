@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-<title>About</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<link rel="stylesheet" href="w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="myStyleSheet.css">
-<style>
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="myStyleSheet.css">
+</head>
 
+<style>
 </style>
 
-
-<body style="max-width:2000px;">
+<body>
 
 <!--
   <div class="topnav">
@@ -37,20 +37,19 @@
   <br>
   <br>
 
+  <div style="max-width: 60%; margin-left: auto; margin-right: auto; font-size: 160%;" align="center"  class="w3-text-grey">
 
-  <div style="max-width: 60% ;margin-left: auto; margin-right: auto; font-size: 160%;" align="center"  class="w3-text-grey">
-
-    <h1 class="w3-jumbo w3-animate-left">About the application</h1>
+    <h1 class="w3-jumbo w3-animate-top">About the application</h1>
 
     <br>
     <br>
 
-    <div class="w3-animate-right">
-      <p>
+    <div>
+      <p class="w3-animate-right">
         This is a password strength evaluation web app. When the password is entered into the input field on the application page, the site will automatically evaluate the strength of the password based on 5 characteristics:
       </p>
 
-      <ul>
+      <ul class="w3-animate-bottom">
         <li>Length</li>
         <li>Presence of Special Characters</li>
         <li>Presence of Alphanumeric</li>
@@ -58,7 +57,7 @@
         <li>Presence of Consecutive characters</li>
       </ul>
 
-      <p>
+      <p class="w3-animate-left">
         Once when the application detects one of these features it will make the destciption of the feature as well as the corrosponding light on the wall, change from red to green. If that feature is removed then the light and text will revert to red. This all happens in real time, no need to submit the password.
       </p>
     </div>
