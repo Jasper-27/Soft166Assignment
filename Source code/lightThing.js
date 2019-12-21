@@ -41,6 +41,21 @@ function switchLightOff(lightID)  //This function takes a light ID number.  It t
     })
 }
 
+//This function clears the password field
+function clearPass(){
+
+	if (psw.value.length > 1){
+		psw.value = "";
+	}
+	txtLengthOver8.innerHTML = "&#128566;";
+	txtLengthOver16.innerHTML = "&#128566;";
+	txtMulticase.innerHTML = "&#128566;";
+	txtSpecialChar.innerHTML = "&#128566;";
+	txtAlphanumeric.innerHTML = "&#128566;";
+	txtRepeatingChars.innerHTML = "&#128566;";
+
+
+}
 
 function passwordCheck() {
 
@@ -108,59 +123,64 @@ function passwordCheck() {
 
 
 //Populating the text on the web page
-  //The color is left in incase the users browser does not support emojis. 
+  //The color is left in incase the users browser does not support emojis.
     if (lengthOver8 == true) {
         txtLengthOver8.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(1,'green')
+				switchLightOn(1,'green')
     } else {
         txtLengthOver8.innerHTML = "&#128560;".fontcolor("#F44336");
-		switchLightOn(1,'red')
+				switchLightOn(1,'red')
     }
 
     if (lengthOver16 == true) {
         txtLengthOver16.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(2,'green')
+				switchLightOn(2,'green')
     } else {
         txtLengthOver16.innerHTML = "&#128560;".fontcolor("#F44336");
-		switchLightOn(2,'red')
+				switchLightOn(2,'red')
     }
 
     if (multicase == true) {
         txtMulticase.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(3,'green')
+				switchLightOn(3,'green')
     } else {
         txtMulticase.innerHTML = "&#128560;".fontcolor("#F44336");
-		switchLightOn(3,'red')
+				switchLightOn(3,'red')
     }
 
     if (specialChar == true) {
         txtSpecialChar.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(4,'green')
+				switchLightOn(4,'green')
     } else {
         txtSpecialChar.innerHTML = "&#128560;".fontcolor("#F44336");
-		switchLightOn(4,'red')
+				switchLightOn(4,'red')
     }
 
     if (alphanumeric == true) {
         txtAlphanumeric.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(5,'green')
+				switchLightOn(5,'green')
     } else {
         txtAlphanumeric.innerHTML = "&#128560".fontcolor("#F44336");
-		switchLightOn(5,'red')
+				switchLightOn(5,'red')
     }
 
-    if (noRepeatingChars == true) {
+		if(noRepeatingChars == true){
         txtRepeatingChars.innerHTML = "&#128522;".fontcolor("#21FF21");
-		switchLightOn(6,'green')
-    } else {
+				switchLightOn(6,'green')
+	}else{
         txtRepeatingChars.innerHTML = "&#128560;".fontcolor("#F44336");
-		switchLightOn(6,'red')
+				switchLightOn(6,'red')
     }
 
     //Doesn't fill in if the password is less than three
-    if (pass.length < 1) {
+		if (pass.length < 2) {
 			clearPass();
-    }
+
+		}
+
+
+
+
 
 
     /*
@@ -176,15 +196,4 @@ function passwordCheck() {
     			"  | Points: " + points)
 
     			*/
-}
-
-//This function clears the password field
-function clearPass(){
-	psw.value = "";
-	txtLengthOver8.innerHTML = "&#8287;";
-	txtLengthOver16.innerHTML = "&#8287;";
-	txtMulticase.innerHTML = "&#8287;";
-	txtSpecialChar.innerHTML = "&#8287;";
-	txtAlphanumeric.innerHTML = "&#8287;";
-	txtNoConsecutiveChars.innerHTML = "&#8287;";
 }
