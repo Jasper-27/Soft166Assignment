@@ -1,6 +1,10 @@
 
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
 
+/*the style of the body */
+body {
+  background-color: white;
+}
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -27,9 +31,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
   text-align: center;
 }
 
-body {
-  background-color: white;
-}
 
 input[type=password], select {
   width: 95%;
@@ -59,6 +60,7 @@ button[type=button], select {
   background-color: #FFFFFF;
 }
 
+/*Formatting for the table*/
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
@@ -67,4 +69,22 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.results-table {
+    float: left;
+    min-width: 50%;
+}
+
+
+/* responsive, form small screens */
+@media (max-width: 775px) {
+    .results-table {
+        float: center;
+        min-width: 100%;
+    }
+
+  .pageTitle {
+    font-size: 40px;
+  }
 }
