@@ -87,7 +87,7 @@ function passwordCheck() {
         }
     }
 
-    //Check for multicase
+    //Check for multi-case
     if (pass != lowPass && pass != highPass) {
         points++;
         multicase = true;
@@ -123,7 +123,7 @@ function passwordCheck() {
 
 
 //Populating the text on the web page
-  //The color is left in incase the users browser does not support emojis.
+  //The color is left in in case the users browser does not support emojis.
     if (lengthOver8 == true) {
         txtLengthOver8.innerHTML = "&#128522;".fontcolor("#21FF21");
 				switchLightOn(1,'green')
