@@ -62,7 +62,7 @@ button[type=button], select {
 
 /*Formatting for the table*/
 td, th {
-  border: 1px solid #dddddd;
+
   text-align: left;
   padding: 8px;
 }
@@ -72,19 +72,33 @@ tr:nth-child(even) {
 }
 
 .results-table {
+    border: 1px solid #dddddd;
     float: left;
     min-width: 50%;
 }
 
 
+/* Flexbox for keeping divs the same height*/
+.row {
+  display: flex; /* equal height of the children */
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+
+  padding: 1em;
+  border: solid;
+}
+
 /* responsive, form small screens */
 @media (max-width: 775px) {
-    .results-table {
-        float: center;
-        min-width: 100%;
+  .results-table {
+    float: center;
+    min-width: 100%;
     }
 
   .pageTitle {
     font-size: 40px;
   }
+
 }
