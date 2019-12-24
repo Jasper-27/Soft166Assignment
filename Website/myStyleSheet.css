@@ -1,5 +1,8 @@
 
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Open Sans", sans-serif;
+  color: grey; 
+}
 
 /*the style of the body */
 body {
@@ -77,18 +80,6 @@ tr:nth-child(even) {
     min-width: 50%;
 }
 
-
-/* Flexbox for keeping divs the same height*/
-.row {
-  display: flex; /* equal height of the children */
-}
-
-.col {
-  flex: 1; /* additionally, equal width */
-
-  padding: 1em;
-  border: solid;
-}
 
 /* responsive, form small screens */
 @media (max-width: 775px) {
