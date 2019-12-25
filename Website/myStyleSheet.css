@@ -1,7 +1,7 @@
 
 html,body,h1,h2,h3,h4,h5,h6 {
   font-family: "Open Sans", sans-serif;
-  color: grey; 
+  color: grey;
 }
 
 /*the style of the body */
@@ -91,5 +91,6 @@ tr:nth-child(even) {
   .pageTitle {
     font-size: 40px;
   }
+
 
 }
