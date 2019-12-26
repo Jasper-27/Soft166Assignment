@@ -8,7 +8,7 @@ The purpose of this web-ap is to test the strength of passwords. The web-app dis
 
 ## Features 
 
-##Display 
+### Display 
 - Ability to control the lights in SMB109. 
 - Ability to display the strong password features present in the users password. 
 
