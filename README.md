@@ -61,4 +61,6 @@ This is the application key page. It contains the key for the lights in SMB109. 
 ![The key application page](https://github.com/Jasper-27/Soft166Assignment/blob/master/screenshots/keyPage.png "Key Page")
 
 
+## Video 
 
+[![Site Video](http://img.youtube.com/vi/RxzDLjRWgbs/0.jpg)](http://www.youtube.com/watch?v=RxzDLjRWgbs)
