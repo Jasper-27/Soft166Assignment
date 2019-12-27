@@ -25,7 +25,11 @@ The purpose of this web-ap is to test the strength of passwords. The web-app dis
 
 All pages have the navbar at the top. The navbar has been keptintentionally simple as it makes the web-app look cleaner in my opinion.
 
+![The navbar](https://github.com/Jasper-27/Soft166Assignment/blob/master/screenshots/navbar.png "Navbar")
+
 All pages contain a footer. This footer states that the page was created using [w3.css](https://www.w3schools.com/w3css/). The footer also acts as a link to the w3.css site. 
+
+![The w3.css footer](https://github.com/Jasper-27/Soft166Assignment/blob/master/screenshots/footer.png "Footer")
 
 ### Home Page 
 
