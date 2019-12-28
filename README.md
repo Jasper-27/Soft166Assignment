@@ -6,6 +6,21 @@ The purpose of this web-ap is to test the strength of passwords. The web-app dis
 - A table situated under the password entry field
 - Changing the colour of lights in SMB109. 
 
+## Application fact sheet 
+
+This web application is made to evaluate the strength of a user password, based on six characteristics, and manipulate the lights in SOFT166 in ways dependent on those characteristics. 
+
+The web application has four pages: home, about, application, and the key. All pages on the web application have the same navigation bar. This navigation bar has links to the other three pages on the site. The navigation bar indicates to the user their current page by underlining that option on the navigation bar.  All pages also have the footer. This footer contains the text “powered by w3.css” this is included to acknowledge that I have used the w3css tool to make the site. The “w3.css” part is a link to the w3css website. 
+
+The home page has two main items on it: The site title, and the creators name. Both these items are animated, with the title coming in from the top, and the creator name coming from the bottom. This can give the web application a sleek modern look. The application title will take the user directly to the application page when clicked, thus making the site easier to navigate. 
+
+The about page is made up of two major sections: about the application, and about the author. The both of these sections are made up of a title and a paragraph of text. All of these are animated and slide onto the page from the left and right. 
+
+The application page is the main page of the application. This is the page that contains both the password entry box and the table which tells the user what secure password characteristics are present in the password they entered. The password box is large and in the middle of the page. The users cursor is automatically set to type in that box. The table used to display the features is below this entry box. The table is updated in real time so that the user can see what part of there password affects the password strength.  On the standard desktop view the results of the password strength are arranged in two columns of three, the same as the lights in SMB109. When in mobile mode the table is turned into a single column with six items. There is also a clear button on this page which can be used to clear the password entry. The items on this page are animated and fly in from the left and right to fit with the other pages which do the same. 
+
+The key page is used to show the user how each password characteristic will affect the lights in smb109. This page is made up of 7 containers which each contain an explanation and a diagram. These diagrams show all the lights on the wall and what colour they should be. In desktop mode these containers are arranged in a grid but when shrunk to mobile mode the containers are in a column. 
+
+
 ## Features 
 
 ### Display 
