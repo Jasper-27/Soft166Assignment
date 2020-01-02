@@ -90,6 +90,10 @@ tr:nth-child(even) {
     min-width: 50%;
 }
 
+.result {
+    font-size: 40px;
+}
+
 
 /* responsive, form small screens */
 @media (max-width: 775px) {
