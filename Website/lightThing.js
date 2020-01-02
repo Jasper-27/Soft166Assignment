@@ -57,10 +57,21 @@ function clearPass(){
 
 }
 
+function showPass(){
+	var element = document.getElementById("psw");
+	var button = document.getElementById("show-button");
+
+
+	if (element.type === "password") {
+		element.type = "text";
+		button.innerHTML = "Hide";
+	} else {
+		element.type = "password";
+		button.innerHTML = "Show"; 
+	}
+}
+
 function passwordCheck() {
-
-
-
 
 
     var pass = document.getElementById("psw").value;

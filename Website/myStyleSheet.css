@@ -34,12 +34,10 @@ body {
   text-align: center;
 }
 
-
-input[type=password], select {
+.mainInput {
   width: 95%;
   padding: 12px 20px;
   margin: 10px 0;
-  display: inline-block;
   border: 5px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -47,20 +45,31 @@ input[type=password], select {
   font-weight: bold;
   background-color: #CCCCCC;
   font-size: 40px;
-	}
+}
 
-button[type=button], select {
-  width: 40%;
-  height: 100px;
-  padding: 12px 20px;
+.clear-button {
+  width: 50%;
+  height: 50px;
   Margin: 10px 0;
-  display: inline-block;
   border: 5px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
   text-align: center;
   font-weight: bold;
   background-color: #FFFFFF;
+  color: grey;
+}
+
+.show-button {
+  width: 50%;
+  height: 50px;
+
+  Margin: 10px 0;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  color: grey;
 }
 
 /*Formatting for the table*/
