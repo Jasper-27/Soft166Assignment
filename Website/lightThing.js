@@ -67,7 +67,7 @@ function showPass(){
 		button.innerHTML = "Hide";
 	} else {
 		element.type = "password";
-		button.innerHTML = "Show"; 
+		button.innerHTML = "Show";
 	}
 }
 
@@ -186,10 +186,13 @@ function passwordCheck() {
     //Doesn't fill in if the password is less than three
 		if (pass.length < 2) {
 			clearPass();
-
+			points = 0;
+			
 		}
 
-
+		if (points >= 0){
+			document.getElementById("password-score").innerHTML = points.toString();
+		}
 
 
 
