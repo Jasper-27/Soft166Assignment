@@ -76,7 +76,7 @@ This is the application key page. It contains the key for the lights in SMB109. 
 ![The key application page](https://github.com/Jasper-27/Soft166Assignment/blob/master/screenshots/keyPage.png "Key Page")
 
 
-## Video
+## Video demonstration
 
 [![Site Video](http://img.youtube.com/vi/ZYv6X8udSIY/0.jpg)](http://www.youtube.com/watch?v=ZYv6X8udSIY)
 
@@ -86,5 +86,5 @@ This is the application key page. It contains the key for the lights in SMB109. 
 [![Firefox Video](http://img.youtube.com/vi/3chdQgrx4s8/0.jpg)](http://www.youtube.com/watch?v=3chdQgrx4s8 )
 ### Google Chrome 78
 
-[![Site Video](http://img.youtube.com/vi/Z6ZNSesy3_4/0.jpg)](http://www.youtube.com/watch?v=Z6ZNSesy3_4)
+[![Chrome Video](http://img.youtube.com/vi/Z6ZNSesy3_4/0.jpg)](http://www.youtube.com/watch?v=Z6ZNSesy3_4)
 
