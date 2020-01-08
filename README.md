@@ -78,7 +78,7 @@ This is the application key page. It contains the key for the lights in SMB109. 
 
 ## Video
 
-[![Site Video](http://img.youtube.com/vi/RxzDLjRWgbs/0.jpg)](http://www.youtube.com/watch?v=RxzDLjRWgbs)
+[![Site Video](http://img.youtube.com/vi/ZYv6X8udSIY/0.jpg)](http://www.youtube.com/watch?v=ZYv6X8udSIY)
 
 ## Web Browser Testing 
 ### Mozilla Firfox 71
