@@ -57,15 +57,8 @@ function allLightsRed(){
     switchLightOn(1,'red')
     switchLightOn(5,'red')
     switchLightOn(6,'red')
-}
 
 
-//This function clears the password field
-function clearPass() {
-
-    if (psw.value.length > 1) {
-        psw.value = "";
-    }
     txtLengthOver8.innerHTML = "&#128566;";
     txtLengthOver16.innerHTML = "&#128566;";
     txtMulticase.innerHTML = "&#128566;";
@@ -73,7 +66,15 @@ function clearPass() {
     txtAlphanumeric.innerHTML = "&#128566;";
     txtRepeatingChars.innerHTML = "&#128566;";
 
-    allLightsRed();
+}
+
+
+//This function clears the password field
+function clearPass() {
+
+
+    psw.value = "";
+    passwordCheck()
 }
 
 //Shows the password in plain text
@@ -165,7 +166,7 @@ function passwordCheck() {
         switchLightOn(5, 'red')
     }
 
-    //Check for consecutive characters
+    //Check for repeating characters
     if (!pass.match(/(.)\1\1/)) {
         points++;
 
@@ -177,8 +178,7 @@ function passwordCheck() {
     }
 
     //Doesn't fill in if the password is less than three
-    if (pass.length < 2) {
-        clearPass();
+    if (pass.length < 4) {
         points = 0;
 
         allLightsRed();
