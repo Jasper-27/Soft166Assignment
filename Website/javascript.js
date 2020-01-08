@@ -49,6 +49,17 @@ function switchLightOff(lightID) {
     })
 }
 
+//
+function allLightsRed(){
+    switchLightOn(2,'red')
+    switchLightOn(3,'red')
+    switchLightOn(4,'red')
+    switchLightOn(1,'red')
+    switchLightOn(5,'red')
+    switchLightOn(6,'red')
+}
+
+
 //This function clears the password field
 function clearPass() {
 
@@ -62,7 +73,7 @@ function clearPass() {
     txtAlphanumeric.innerHTML = "&#128566;";
     txtRepeatingChars.innerHTML = "&#128566;";
 
-
+    allLightsRed();
 }
 
 //Shows the password in plain text
@@ -169,6 +180,8 @@ function passwordCheck() {
     if (pass.length < 2) {
         clearPass();
         points = 0;
+
+        allLightsRed();
 
     }
 
